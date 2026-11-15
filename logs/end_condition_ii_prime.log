@@ -1,0 +1,6 @@
+end condition (ii') with the disc of label_tube_ellip0.3_0.13_0.1_fit.npz (M = 0 section of Lambda(0)) and its mirror
+end condition (ii'): tails: ell <= -3.0 lower bound +7.8797e-02; ell >= 3.866: >= +1; middle: 3634 boxes, min lower bound of passing boxes +3.5017e-06, failing boxes 0
+  (A8_hi = 2.5198721686724825)
+  on dD (M = 0 section of Lambda(0), 720 points): S_E^c(1, x) - A8 min +1.0251e-02
+END CONDITION (ii') VERIFIED
+elapsed 25 s

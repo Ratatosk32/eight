@@ -1,0 +1,4 @@
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/check_run1/mutations/m2_low_top.npz md5 0b67d24c2c193a09e64a5208ce0c44c6; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+  D: reused proved boxes from this run directory: {'full': 11555, 'light': 2190}; to compute: 1 batches
+D PASS: (R) full mode 11556 leaves (closed tube + Sturm), record-only 2190 (closed tube), slab 230 boxes; min Sturm y 3.593e-01; saved data in words/out/eight/check_run1/mutations/run_m2\saves (1270 s)
+STAGES D PASS (1270 s); stage F: verify/eight_check_records.py on words/out/eight/check_run1/mutations/run_m2

@@ -1,0 +1,8 @@
+STAGE F5v2: run words/out/eight/check_run1, F dirs ['words/out/eight/check_run1/mutations/run_m2/F', 'words/out/eight/check_run1/F'], workers 2, mutation None; empty rule {'NSLAB': 1000, 'NSL': 240, 'E_LO_FACTOR': 0.99}
+  code md5: eight_check_f5v2.py 639c63ffa32a5106c7d02902411498b4; eight_check_f5.py 3b12672e0aaece5398c64a3a7fd1fdfb; eight_check_records.py 734cc78bea4f623a235956807948a219; eight_check.py 7d8babebdaea806ca01664bbbcc86d22; eight_iiL_cover.py bf6b898022191052dd1926cc08ce388e; eight_iiL_shadowrec.py ce9a29f090754efc1512543f15365870
+  words/out/eight/check_run1/mutations/run_m2/F: 1 boxes, good 0, not at the top 1: full_20261115140613_00000.npz box 0 (eps 0.057151, phi [0.57712, 0.57837])
+  words/out/eight/check_run1/F: 13810 boxes, good 13807, not at the top 3: full_00160.npz box 6 (eps 0.0455976, phi [0.50712, 0.51212]), full_00180.npz box 13 (eps 0.049808, phi [0.53212, 0.53712]), full_00209.npz box 0 (eps 0.0568637, phi [0.54212, 0.54712])
+  top re-test at RC_NSLAB 4000: 3 of 4 certified at the top (F/full_00160.npz#6: tube A, F/full_00180.npz#13: tube A, F/full_00209.npz#0: tube A)
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13745; without one 1, of which needing a record 1 (114 s)
+STAGE F5v2 FAIL 1 leaves need records and have no good box (114 s)
+F5v2 exit 1

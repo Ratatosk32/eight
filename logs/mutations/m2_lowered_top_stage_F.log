@@ -1,0 +1,16 @@
+STAGE F: saves D:\nature-math\math-gaps\words\out\eight\check_run1\mutations\run_m2\saves (1 files), out D:\nature-math\math-gaps\words\out\eight\check_run1\mutations\run_m2\F, workers 4, mutation None
+  constants {'DELL': 0.0025, 'LB_MIN': 0.0001, 'NSUB': 3, 'FDEPTH': 1, 'RLEVELS': 2, 'REL_F': 0.005, 'REL_MIN': 0.0002, 'REL_MAX': 0.01, 'EDEPTH': 4, 'REF_N': 2, 'THIN_ORDER': 6, 'BOX_ORDER': 12, 'CHUNK': 12, 'MFINE_MAX': 256, 'PFRAC': (0.875, 0.75, 0.5, 0.25), 'Q_STAR': 0.86, 'X_ELEV': 3, 'X_RLEV': 5, 'X_REFN': 2, 'FINE_W': 0.001, 'MAXB': 3000, 'NSHELL': 6, 'TC_NSLAB': 1000, 'EPS_MIN': 0.001, 'NEEDS_DEPTH': 2, 'NEEDS_NUV': 48, 'VOL_RTOL': 1e-09}
+  A8_hi = 2.5198561844280873 (k1_a8.npz a8_act_hi), K1 half-width 3e-05, Y_1 >= 1.0018869137178519; tube A D:\nature-math\math-gaps\words/out/eight/tubeb/label_tube_ellip0.3_0.13_0.1_fit_taper_b070_t02_03.npz md5 1158b87b735de6f62d8241e245493be2; goal md5 ebaf84b5c3b18a1eec48c51b59ec6863; earlier tube D:\nature-math\math-gaps\words\out\eight\tubeb\label_tube_ellip0.3_0.13_0.1_fit_taper.npz md5 c35c6d5fc1294a2d9f80cb65a2fb4c20
+  code md5: eight_check_records.py 734cc78bea4f623a235956807948a219; eight_iiL_shadowrec.py ce9a29f090754efc1512543f15365870; eight_iiiL_shadow.py 6bd38371cef3abeeca5ff099b31971a5; eight_tube_boundary.py a92d6a72277028e193ab3fae1be573c6; eight_comptube.py 03bdfeea8f8acef0cf5736832f5d2021; eight_field.py 75f888e80459b4ceabdcec23d2c20c5b; eight_field_lohner.py 29fa0a8cd5c4ff604a814eeb60b645cf; eight_riccati_barrier.py 7a1fb4950fc19256886c1ba0ad419c06; prove_newton_1212.py 2448ca82e3945ce1a5a342374c68e471; words_eight_tubeb.py 276ffb589ed2d935c48bef45d4e9be51
+F1 records: 1 boxes, closed and thin 1, passing 1; failing rows 0, unresolved 0, refinement exceptions 0, unclosed sub-boxes 0; verification violations 0 []; tiling failures 0; min lb +2.3072e-02 (5 s)
+F2 (ii-1): boxes with a failing piece 0 in 0 files; still failing after refinement 0 (5 s)
+F3 (iii-L): level 1 on 1 files {'out': 11}; survivors 0 (+0 without an s = 1 box), 0 inside the shell cube 0.00192; level 2: 6 tasks, 292 boxes evaluated, left 0 (172 s)
+    shell 0.00012..0.00024: 30 boxes, left 0, {'alpha': 20, 'beta': 0, 'gamma': 0, 'delta': 8, 'k1': 0, 'lohner_fail': 0}
+    shell 0.00024..0.00048: 42 boxes, left 0, {'alpha': 22, 'beta': 0, 'gamma': 0, 'delta': 12, 'k1': 0, 'lohner_fail': 0}
+    shell 0.00048..0.00096: 66 boxes, left 0, {'alpha': 28, 'beta': 0, 'gamma': 4, 'delta': 14, 'k1': 0, 'lohner_fail': 0}
+    shell 0.00096..0.00192: 102 boxes, left 0, {'alpha': 25, 'beta': 0, 'gamma': 4, 'delta': 35, 'k1': 0, 'lohner_fail': 0}
+    shell 3e-05..6e-05: 26 boxes, left 0, {'alpha': 20, 'beta': 0, 'gamma': 0, 'delta': 6, 'k1': 0, 'lohner_fail': 0}
+    shell 6e-05..0.00012: 26 boxes, left 0, {'alpha': 20, 'beta': 0, 'gamma': 0, 'delta': 6, 'k1': 0, 'lohner_fail': 0}
+F4 top check: 1 boxes; tube A 0, earlier tube 0, NOT at the top 1 (192 s)
+F5 cover: 1 leaves (R 1, record-only 0); without a passing saved box 1, of which needing a record 1 (192 s)
+STAGE F FAIL F5 cover: 1 leaves need records and have no passing box (192 s)

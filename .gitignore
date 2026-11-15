@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+run*/
+*.aux
+*.log.tmp
+paper/eight/*.aux
+paper/eight/*.out
+paper/eight/build*.log
+paper/eight/main.log

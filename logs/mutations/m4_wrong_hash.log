@@ -1,0 +1,2 @@
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/check_run1/mutations/m4_wrong_md5.npz md5 37aa7707514b68e76c70bacbdb43b285; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+CHECK FAIL: A: md5 of words/out/eight/block/cert_pieces_E_goalEfit.json is ebaf84b5c3b18a1eec48c51b59ec6863, header says 00000000000000000000000000000000

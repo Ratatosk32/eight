@@ -1,0 +1,10 @@
+   (a) depth 0: accepted 6576, to split 3064
+   (a) depth 1: accepted 3704, to split 8162
+   (a) depth 2: accepted 13317, to split 18758
+   (a) depth 3: accepted 54268, to split 20105
+   (a) depth 4: accepted 79814, to split 50
+   (a) depth 5: accepted 109, to split 0
+[rigorous small s] (a) 157788 patches that may have |M| < 0.01 (s in [0, 0.0001165]): section form q in [0.9200, 1.0300], inside the certified band (0.92, 1.03): True; r over all patches >= 2.0314; kept: r in [2.0476, 6.9239], phi in [0.3863, 1.2743]  (525 s)
+   (b) interval flow on 30 phi slices, eps in [0, 4.63e-09], M in [-0.01, 0.01]: a_n = 4.1858, a_T = 0.3742, b_n = 2.817, b_T = 23.836  (33250 s)
+   (c) rho = 0.3157; over 157788 inflated x0 boxes, t in [1 - s0, 1]: Lx = 1.6355, Lxn = 1.2478, Lt = 2.2265; max U(Y0) = 5.552  (33323 s)
+   K = Lt + r_max (Lxn a_n + Lx a_T)^2/8 + s0 r_min^(-1/2)(Lxn b_n + Lx b_T) + r_min^(-1/2) Umax = 35.576; needed m' = K s0 = 4.145e-03; |M| >= M1: W - A8 >= +9.670e-01 for s <= s0

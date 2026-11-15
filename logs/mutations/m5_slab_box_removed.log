@@ -1,0 +1,3 @@
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/check_run1/mutations/m5b_missing_slab_inside.npz md5 730eae90daa7657f464cabe80833f540; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+E1 PASS: universe phi [0.3871, 1.2757] x kappa [-11.329, 11.329] (2944 grid cells) covered by 11556 leaves up to 2506 parts certainly empty of Q (3251 s)
+CHECK FAIL: E: 2 of 29 uncovered slab parts are not certainly outside Q

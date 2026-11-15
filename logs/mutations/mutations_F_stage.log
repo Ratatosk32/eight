@@ -1,0 +1,84 @@
+mutations against frozen code (2026-11-15 06:39); md5:
+734cc78bea4f623a235956807948a219 *verify/eight_check_records.py
+ce9a29f090754efc1512543f15365870 *verify/eight_iiL_shadowrec.py
+6bd38371cef3abeeca5ff099b31971a5 *verify/eight_iiiL_shadow.py
+bf6b898022191052dd1926cc08ce388e *verify/eight_iiL_cover.py
+e4343845840a5a621a9e089049882d77 *verify/eight_iiL_gapcheck.py
+7d8babebdaea806ca01664bbbcc86d22 *verify/eight_check.py
+m4 wrong goal md5 in header -> stage A: CHECK FAIL: A: md5 of words/out/eight/block/cert_pieces_E_goalEfit.json is ebaf84b5c3b18a1eec48c51b59ec6863, header says 00000000000000000000000000000000
+m3 fat fake (R) leaf -> stage D: CHECK FAIL: D: boxes not proved: {'full': 1, 'light': 0, 'slab': 0} of {'full': 1, 'light': 1, 'slab': 4}
+== stage F mutations (records side), Sun Nov 15 07:10:38 CEST 2026
+frozen code md5 (checked against frozen_code.md5 before the runs):
+734cc78bea4f623a235956807948a219 *verify/eight_check_records.py
+ce9a29f090754efc1512543f15365870 *verify/eight_iiL_shadowrec.py
+6bd38371cef3abeeca5ff099b31971a5 *verify/eight_iiiL_shadow.py
+bf6b898022191052dd1926cc08ce388e *verify/eight_iiL_cover.py
+e4343845840a5a621a9e089049882d77 *verify/eight_iiL_gapcheck.py
+7d8babebdaea806ca01664bbbcc86d22 *verify/eight_check.py
+mini certificate: 2 saved step-3 files (b_532ee18c96a365c6, b_c31333ffd9c88c95), 8 boxes as R leaves; k1_a8.npz = tubeb/k1_a8_artifact.npz; 1 worker, BelowNormal; check_universe 0; old tube label_tube_ellip0.3_0.13_0.1_fit_taper.npz
+-- mutation -:
+F1 records: 8 boxes, closed and thin 8, passing 8; failing rows 0, unresolved 0, refinement exceptions 0, unclosed sub-boxes 0; verification violations 0 []; tiling failures 0; min lb +1.2118e-04 (78 s)
+STAGE F PASS (796 s)
+-- mutation m6:
+F1 records: 8 boxes, closed and thin 8, passing 7; failing rows 0, unresolved 0, refinement exceptions 0, unclosed sub-boxes 0; verification violations 1 ['out not certainly outside on every piece']; tiling failures 0; min lb +1.2118e-04 (63 s)
+STAGE F FAIL F1 verification: 1 rows (out not certainly outside on every piece); F5 cover: 1 leaves need records and have no passing box (741 s)
+-- mutation m7:
+F1 records: 8 boxes, closed and thin 8, passing 7; failing rows 0, unresolved 0, refinement exceptions 0, unclosed sub-boxes 0; verification violations 1 ['T node not preceded by a certainly-inside run (G1)']; tiling failures 0; min lb +1.2118e-04 (63 s)
+STAGE F FAIL F1 verification: 1 rows (T node not preceded by a certainly-inside run (G1)); F5 cover: 1 leaves need records and have no passing box (739 s)
+exit codes:
+exit - 0
+exit m6 1
+exit m7 1
+m6: the first T row of the first file forced to class out; m7: its node moved to the first piece after the inside run. Both FAIL as required; the clean run PASSes.
+== F5 rerun (verify/eight_check_f5.py) on check_run1, Sun Nov 15 12:20:40 CEST 2026
+3b12672e0aaece5398c64a3a7fd1fdfb *verify/eight_check_f5.py
+-- official F5 rerun:
+STAGE F5 (rerun of the cover of stage F): run words/out/eight/check_run1, workers 2, mutation None
+  passing boxes 13810, at the top of Q 13807, not at the top 3: full_00160.npz box 6 (eps 0.0455976, phi [0.50712, 0.51212]), full_00180.npz box 13 (eps 0.049808, phi [0.53212, 0.53712]), full_00209.npz box 0 (eps 0.0568637, phi [0.54212, 0.54712])
+  not-at-top boxes that are boxes of certificate leaves: 3 of 3; saved boxes that belong to no leaf: 63
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13743; without one 3, of which needing a record 3 (62 s)
+F5 universe below EPS_MIN: needing fine cells 44180, not inside the passing leaf rectangles 1138; patches with an unusable enclosure 0 (74 s)
+STAGE F5 FAIL 3 leaves need records and have no good box; universe: 1138 needing cells outside the leaves, 0 unusable patches (74 s)
+-- m11 (the good box of one leaf that needs records deleted):
+STAGE F5 (rerun of the cover of stage F): run words/out/eight/check_run1, workers 2, mutation m11
+  m11: good box of leaf 0 deleted (1 box(es))
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13742; without one 4, of which needing a record 4 (36 s)
+STAGE F5 FAIL 4 leaves need records and have no good box; universe: 1144 needing cells outside the leaves, 0 unusable patches (42 s)
+m11 exit 1
+m11 FAILs (4 leaves without a good box against 3 in the unmutated rerun); the unmutated rerun FAILs too (see above), so m11 is shown by the count, not by PASS -> FAIL.
+== F5 v2 (verify/eight_check_f5v2.py) on check_run1, Sun Nov 15 13:09:24 CEST 2026
+639c63ffa32a5106c7d02902411498b4 *verify/eight_check_f5v2.py
+-- clean:
+  top re-test at RC_NSLAB 4000: 3 of 3 certified at the top (F/full_00160.npz#6: tube A, F/full_00180.npz#13: tube A, F/full_00209.npz#0: tube A)
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13746; without one 0, of which needing a record 0 (44 s)
+F5 universe below EPS_MIN: needing fine cells 44180, not inside the passing leaf rectangles 1134; their uncovered parts 1158, empty (no point of Q with eps >= e_lo = 2.378e-08) 1158; cells with a non-empty uncovered part 0; patches with an unusable enclosure 0 (1133 s)
+STAGE F5v2 PASS (1133 s)
+clean exit 0
+-- m11 (universe check off):
+  m11: good box(es) of leaf 0 deleted: ['F/full_00000.npz#14']
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13745; without one 1, of which needing a record 1 (46 s)
+STAGE F5v2 FAIL 1 leaves need records and have no good box (46 s)
+m11 exit 1
+== m2 (one R leaf's eps_top lowered to 0.9 x), Sun Nov 15 15:23:56 CEST 2026
+certificate words/out/eight/check_run1/mutations/m2_low_top.npz md5 0b67d24c2c193a09e64a5208ce0c44c6: R leaf 6081, cell phi [0.5771183756972151, 0.5783683756972151] kappa [-1.0566016230871875, -1.0538356502518806], eps_top 0.06350108672754715 -> 0.05715097805479243 (float search: Q reaches 0.974 eps_top in this rectangle)
+run dir words/out/eight/check_run1/mutations/run_m2: saves hard-linked from check_run1/saves, k1_a8.npz copied
+-- stage D (verify/eight_check.py md5 7d8babebdaea806ca01664bbbcc86d22):
+  D: reused proved boxes from this run directory: {'full': 11555, 'light': 2190}; to compute: 1 batches
+D PASS: (R) full mode 11556 leaves (closed tube + Sturm), record-only 2190 (closed tube), slab 230 boxes; min Sturm y 3.593e-01; saved data in words/out/eight/check_run1/mutations/run_m2\saves (1270 s)
+STAGES D PASS (1270 s); stage F: verify/eight_check_records.py on words/out/eight/check_run1/mutations/run_m2
+-- stage F on the new save file, leaf 6081 only, universe off (coordinator's run_m2_stage_f.py; eight_check_records.py md5 734cc78bea4f623a235956807948a219):
+F1 records: 1 boxes, closed and thin 1, passing 1; failing rows 0, unresolved 0, refinement exceptions 0, unclosed sub-boxes 0; verification violations 0 []; tiling failures 0; min lb +2.3072e-02 (5 s)
+F2 (ii-1): boxes with a failing piece 0 in 0 files; still failing after refinement 0 (5 s)
+F3 (iii-L): level 1 on 1 files {'out': 11}; survivors 0 (+0 without an s = 1 box), 0 inside the shell cube 0.00192; level 2: 6 tasks, 292 boxes evaluated, left 0 (172 s)
+F4 top check: 1 boxes; tube A 0, earlier tube 0, NOT at the top 1 (192 s)
+F5 cover: 1 leaves (R 1, record-only 0); without a passing saved box 1, of which needing a record 1 (192 s)
+STAGE F FAIL F5 cover: 1 leaves need records and have no passing box (192 s)
+-- F5 v2 over run_m2/F and check_run1/F, full m2 leaves, universe off (eight_check_f5v2.py md5 639c63ffa32a5106c7d02902411498b4):
+  words/out/eight/check_run1/mutations/run_m2/F: 1 boxes, good 0, not at the top 1: full_20261115140613_00000.npz box 0 (eps 0.057151, phi [0.57712, 0.57837])
+  words/out/eight/check_run1/F: 13810 boxes, good 13807, not at the top 3: full_00160.npz box 6 (eps 0.0455976, phi [0.50712, 0.51212]), full_00180.npz box 13 (eps 0.049808, phi [0.53212, 0.53712]), full_00209.npz box 0 (eps 0.0568637, phi [0.54212, 0.54712])
+  top re-test at RC_NSLAB 4000: 3 of 4 certified at the top (F/full_00160.npz#6: tube A, F/full_00180.npz#13: tube A, F/full_00209.npz#0: tube A)
+F5 cover: 13746 leaves (R 11556, record-only 2190); matched to a good box 13745; without one 1, of which needing a record 1 (114 s)
+STAGE F5v2 FAIL 1 leaves need records and have no good box (114 s)
+F5v2 exit 1
+unmatched leaf: [np.int64(6081)] gap check needs records: [True]
+note: an earlier F5 v2 attempt at 14:56 failed with FileNotFoundError (stage F not yet run; my stdin-launched stage F could not spawn workers, output in run_m2/stage_F_broken_stdin.out); superseded by the run above.

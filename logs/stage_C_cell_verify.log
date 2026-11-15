@@ -1,0 +1,5 @@
+side E: 13248 cells, 1319143360 boxes; cell inequality on all cells: True; worst lower bound 3.1330e-12
+  far field (sigma >= 11.0): True; worst 6.0501e-06
+  low end (sigma <= -3.0, phi = 2.5986695638790263): True
+  continuity: 29051 distinct nodes, 41040 faces, all matched
+ALL VERIFIED

@@ -1,0 +1,99 @@
+\section{Specification of the certificate and of the checker}\label{app:spec}
+This appendix states what the checker reads, what each stage computes, and what it guarantees when it passes
+(its postcondition). Proposition~\ref{prop:checker} uses only these postconditions.
+
+\subsection{Inputs}
+\begin{itemize}
+\item[(I1)] The subsolution: one JSON file with the cube frames, the cells (ranges of $\sigma,u_a,u_b$, face index) and
+the nodal values of $\varphi$ (degree $(2,1,1)$ Lagrange nodes; shared nodes carry one value, identified by a node id),
+the constant $\varphi_{\rm lo}$ and the levels $\sigma_{\rm lo}=-3$, $\sigma_{\rm hi}=11$.
+\item[(I2)] The tube: the centres $c(s)$ and positive definite matrices $G(s)$ of $\Lambda(s)=\{a:(a-c(s))^TG(s)(a-c(s))\le1\}$
+at 41 nodes $s_j$ (linear in $s$ between nodes), with the taper of Section~\ref{sec:field} already applied.
+\item[(I3)] The earlier tube used by the top check where it is cheaper (same format; tube fact F6 states $\Lambda\subset\Lambda_{\rm old}$).
+\item[(I4)] The certificate: arrays
+$R=\{(\theta_a,\theta_b,\kappa_a,\kappa_b,\varepsilon_{\rm top})\}$ ($11\,556$ field leaves),
+$R'$ of the same form ($2\,190$ record-only leaves),
+$P=\{(0,\varepsilon_0,\theta_a,\theta_b,M_a,M_b)\}$ ($230$ slab boxes),
+and a header with the paths and hashes of (I1)-(I3), $A_8^{\rm hi}$, the approximate label $a_8$, the Krawczyk
+half-widths and $\varepsilon_0=10^{-3}$.
+\end{itemize}
+Nothing else from the search is read. A leaf $(\theta_a,\theta_b,\kappa_a,\kappa_b,\varepsilon_{\rm top})$ defines the
+label box
+\[
+B=\{\varepsilon_{\rm top}\}\times[\theta_a,\theta_b]\times[M_a,M_b],\qquad [M_a,M_b]\supseteq\{\kappa\sqrt{\varepsilon_{\rm top}}:
+\kappa\in[\kappa_a,\kappa_b]\},
+\]
+where $[M_a,M_b]$ is computed by the checker in interval arithmetic (outward rounding); every stage uses this one
+construction.
+
+\subsection{Stages and postconditions}
+\paragraph{Stage A.} Recomputes the hashes of (I1)-(I3) and compares them with the header; evaluates the tube facts in
+interval arithmetic. Postcondition: the inputs are the ones named in the certificate, and (T) holds: $G(s_j)$ positive
+definite at every node, $a_8(s)\in\operatorname{int}\Lambda(s)$ for all $s\in[0,1]$, $M=0$ interior to the $M$-range of
+$\Lambda(0)$, the $\theta$-range of the tube in $(0,\pi)$, $\Lambda(0)$ equal to the untapered fit, and
+$\Lambda(s)\subset\Lambda_{\rm old}(s)$ for all $s$ (F6).
+
+\paragraph{Stage B.} Interval Taylor integration of \eqref{eq:scaled} with first-order jets in the labels; Krawczyk
+test for $\mathcal N=(x_2,x_3,p_1)(1,\cdot)$ on the cube $K_1$ of half-width $3\cdot10^{-5}$ and on a cube of half-width
+$10^{-12}$; Lohner enclosure of the action over the small cube. Postcondition: (K) and (K1): $\mathcal N$ has exactly one
+zero in each cube, $Y_1>0$ there, and $A_8\le A_8^{\rm hi}$.
+
+\paragraph{Stage C.} The cell verifier on (I1): on every cell, a lower bound of $F$ by interval arithmetic (closed
+forms of the gnomonic geometry; $U$ bounded below near collision rays) with bisection in all three directions to depth
+12; the far condition on every cell with $\sigma_{\rm hi}$ as upper level; the low condition; and conformity: every
+face of every cell is either on the boundary of the domain or matched node by node with exactly one face of a
+neighbouring cell. Postcondition: (C), with $\varphi$ continuous.
+
+\paragraph{Stage D.} For every leaf of $R$ and $R'$, and every slab box of $P$, the label box is proved with the
+comparison tube of Lemma~\ref{lem:comp} (centre trajectory by an interval Taylor method of order 12, $\mathcal R$
+enclosed by a centred form, eigenvalues by interval Cholesky; batches of 16 boxes on a common time grid of 168
+pieces). Leaves of $R$ and slab boxes: the tube closes strictly ($y_1<\rho^*$, $y_2<v^*$ on every piece) and the Sturm
+solution is positive on $[0,1]$. Leaves of $R'$: the tube closes strictly. The tube data (enclosures of position,
+velocity and $\mathcal R$ per piece, $y_1,y_2$, the thin centre) are saved per batch. Postcondition: (R) and (N) on
+every label box of $R$ and on every slab box (the slab with $\varepsilon\in[0,\varepsilon_0]$ as a box parameter);
+a closed comparison tube on every label box of $R'$.
+
+\paragraph{Stage E.} (E1) The checker builds a grid of the $(\theta,\kappa)$-range of $Q$ from rigorous bounds of the tube
+($\theta$-cells of width $0.02$ over $[\theta_{\min},\theta_{\max}]$, 64 $\kappa$-cells over $[-\kappa_{\max},\kappa_{\max}]$),
+removes the leaf rectangles of $R$, decomposes the rest into elementary rectangles of the edge arrangement, and checks
+that each is certainly disjoint from $Q\cap\{\varepsilon\ge\varepsilon_0\}$: its $\varepsilon_{\rm top}$, computed
+with $240$ logarithmic $\varepsilon$-slices and the outside test of the ellipsoids on $1\,000$ $s$-slabs, is empty.
+(E2) Likewise the $(\theta,M)$-range of $Q\cap\{\varepsilon\le\varepsilon_0\}$ minus the slab boxes is certainly outside
+$Q$. Postcondition: every $(\theta,\kappa)$ with a point of $Q$ at $\varepsilon\ge\varepsilon_0$ lies in a leaf rectangle of
+$R$, and every point of $Q$ with $\varepsilon\le\varepsilon_0$ lies in a slab box.
+
+\paragraph{Stage F.} On the saved tube data of stage D:
+\begin{itemize}
+\item[(F1)] Records. For every box, the checker builds its rows (Section~\ref{sec:boundary}): a grid of scale
+intervals of width $\delta\ell=0.0025$ covering the $\ell$-range of the tube, refined by halving in $(\ell,\theta,M)$,
+each row classified as outside, class I, inside up to the top, or carrying a record at a node with a certainly-inside
+run before it; every record must have a positive lower bound \eqref{eq:record}. Every row's class is re-tested
+independently, and the rows of each box are checked to lie in the box with volumes adding up to the box's volume.
+\item[(F2)] (ii-1) on the boxes at $s=1$, with refinement of failing pieces.
+\item[(F3)] (X): level 1 on the saved boxes at $s=1$ (tests $\alpha,\beta,\gamma$), level 2 on shells of half-widths
+$2^k\cdot3\cdot10^{-5}$, $k=0,\dots,6$, around $a_8$ and on the survivors (tests $\alpha$ to $\epsilon$), integrated afresh.
+\item[(F4)] The top check: for every box, every curve $\{(\theta,\kappa)\ \text{fixed}\}$ through its rectangle has no point
+of $Q$ above $\varepsilon_{\rm top}$ (outside test of tube A, or of the earlier tube using F6, on $1\,000$ $s$-slabs, and
+on $4\,000$ where $1\,000$ do not suffice).
+\item[(F5)] The cover: every leaf of $R\cup R'$ is matched to a saved box equal to its label box that passed (F1)-(F4);
+the boundary patches of the tube with $s\in[s_0,1]$ and $\varepsilon<\varepsilon_0$ that are neither of class I nor have
+$W>A_8^{\rm hi}$ (recomputed by the checker) lie in the union of the leaf rectangles, up to parts certainly empty of
+$Q$ (the rule of stage E).
+\end{itemize}
+Postcondition: (ii-L) for $s\ge s_0$ and (X), in the sense of the proof of Proposition~\ref{prop:checker}.
+
+\paragraph{Separate scripts.} (ii$'$) on $I$ outside the two open discs (bisection in $(\log|x|,$ angle$)$, tails by the
+explicit bounds of Section~\ref{sec:boundary}); the two bands; Lemma~\ref{lem:smalls} (patch projection, displacement
+constants by an interval Taylor flow on 30 $\theta$-slices of width $0.03$, Lipschitz constants of $S$). Postcondition:
+(ii$'$), the band margins, and (ii-L) for $s\le s_0$.
+
+\subsection{Arithmetic and environment}
+All checks use one interval class with outward rounding: results of $+,-,\times,/$ and $\sqrt{\ }$ are widened by one ulp,
+results of library transcendental functions by three ulp. Python 3.11, numpy 2.4, Windows x64. The subsolution
+inequality is re-checked independently in Arb (Section~\ref{sec:subsolution}).
+
+\subsection{Reproduction}
+One command runs stages A to F on the certificate (about 13 hours on 10 processes of a laptop, most of it in stages D
+and F); the separate scripts for (ii$'$) and the bands run in seconds, the one for Lemma~\ref{lem:smalls} in about 9
+hours on one process (the displacement constants). Every stage prints the hashes of its code and inputs and one line
+PASS or FAIL.

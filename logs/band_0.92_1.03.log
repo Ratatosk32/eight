@@ -1,0 +1,2 @@
+band q in [0.92, 1.03] of the disc of label_tube_ellip0.3_0.13_0.1_fit.npz (A8_hi = 2.5198721686724825): 1091 boxes; rigorous min of S_E^c(1, x) - A8 over the cover +4.5000e-03 (target 0.0045); boxes below target at depth 10: 0
+elapsed 8 s

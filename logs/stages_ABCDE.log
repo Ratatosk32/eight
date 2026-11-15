@@ -1,0 +1,51 @@
+checker baad1621bdac02c61d6d84897e7ba5a5; certificate words/out/eight/certificate/eight_cert.npz md5 a9f0877dafad1aa3113604443d9b68e0; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+A PASS: input md5 match the header; tube facts F1-F6 verified
+B PASS: Krawczyk K1 (half-width 3e-05) and small cube (1e-12) proved, Y_1 > 0; A8 in [2.5198560001563233, 2.5198561844280873] <= A8_hi 2.5198721686724825
+  D: 50/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 1393 s
+  D: 100/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 3031 s
+  D: 150/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 4549 s
+  D: 200/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 5878 s
+  D: 250/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 7133 s
+  D: 300/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 8481 s
+  D: 350/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 9721 s
+  D: 400/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 11030 s
+  D: 450/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 12154 s
+  D: 500/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 13346 s
+  D: 550/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 14612 s
+  D: 600/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 15969 s
+  D: 650/875 batches; failures {'full': 0, 'light': 0, 'slab': 0}; 17476 s
+  D: 700/875 batches; failures {'full': 1, 'light': 0, 'slab': 0}; 19196 s
+  D: 750/875 batches; failures {'full': 1, 'light': 0, 'slab': 0}; 20257 s
+  D: 800/875 batches; failures {'full': 1, 'light': 0, 'slab': 0}; 20838 s
+  D: 850/875 batches; failures {'full': 1, 'light': 0, 'slab': 0}; 21808 s
+CHECK FAIL: D: boxes not proved: {'full': 1, 'light': 0, 'slab': 0} of {'full': 11553, 'light': 2190, 'slab': 230}
+ABDE FAILED
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/certificate/eight_cert_v2.npz md5 ae38366f60b0c2824b43244864e66a5a; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+A PASS: input md5 match the header; tube facts F1-F6 verified
+B PASS: Krawczyk K1 (half-width 3e-05) and small cube (1e-12) proved, Y_1 > 0; A8 in [2.5198560001563233, 2.5198561844280873] <= A8_hi 2.5198721686724825
+  D: reused proved boxes from this run directory: {'full': 11552, 'light': 2190}; to compute: 1 batches
+D PASS: (R) full mode 11556 leaves (closed tube + Sturm), record-only 2190 (closed tube), slab 230 boxes; min Sturm y 1.601e-01; saved data in words/out/eight/check_run1\saves (1132 s)
+CHECK FAIL: E: 70 of 2582 uncovered parts of the universe are not certainly empty of Q
+ABDE v2 FAILED
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/certificate/eight_cert_v3.npz md5 8ac8e4b77cbb4fae7f0cba90637fa9c3; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+A PASS: input md5 match the header; tube facts F1-F6 verified
+B PASS: Krawczyk K1 (half-width 3e-05) and small cube (1e-12) proved, Y_1 > 0; A8 in [2.5198560001563233, 2.5198561844280873] <= A8_hi 2.5198721686724825
+  D: reused proved boxes from this run directory: {'full': 11493, 'light': 2190}; to compute: 4 batches
+D PASS: (R) full mode 11556 leaves (closed tube + Sturm), record-only 2190 (closed tube), slab 230 boxes; min Sturm y 7.986e-02; saved data in words/out/eight/check_run1\saves (1402 s)
+E1 PASS: universe phi [0.3871, 1.2757] x kappa [-11.329, 11.329] (2944 grid cells) covered by 11556 leaves up to 2506 parts certainly empty of Q (1605 s)
+CHECK FAIL: E: 127 of 174 uncovered slab parts are not certainly outside Q
+ABDE v3 FAILED
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/certificate/eight_cert_v4.npz md5 c4b69594225729c7129d740551f15787; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+A PASS: input md5 match the header; tube facts F1-F6 verified
+B PASS: Krawczyk K1 (half-width 3e-05) and small cube (1e-12) proved, Y_1 > 0; A8 in [2.5198560001563233, 2.5198561844280873] <= A8_hi 2.5198721686724825
+  D: reused proved boxes from this run directory: {'full': 11556, 'light': 2190}; to compute: 0 batches
+D PASS: (R) full mode 11556 leaves (closed tube + Sturm), record-only 2190 (closed tube), slab 230 boxes; min Sturm y 3.808e-01; saved data in words/out/eight/check_run1\saves (1133 s)
+E1 PASS: universe phi [0.3871, 1.2757] x kappa [-11.329, 11.329] (2944 grid cells) covered by 11556 leaves up to 2506 parts certainly empty of Q (1611 s)
+E2 PASS: slab eps in [0, 0.001] universe covered by 230 slab boxes up to 27 parts certainly outside Q (1613 s)
+STAGES ABDE PASS (2943 s); stage F: verify/eight_check_records.py on words/out/eight/check_run1
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/certificate/eight_cert_v4.npz md5 c4b69594225729c7129d740551f15787; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+RUN FINISHED v4
+checker 7d8babebdaea806ca01664bbbcc86d22; certificate words/out/eight/certificate/eight_cert_v4.npz md5 c4b69594225729c7129d740551f15787; python 3.11.4 numpy 2.4.6 Windows-10-10.0.26200-SP0; settings EPS_MIN 0.001 NSLAB 1000 NSL 240 LORDER 12 BATCH 16 H 0.01
+C PASS: side E: 13248 cells, 1319143360 boxes; cell inequality on all cells: True; worst lower bound 3.1330e-12 | far field (sigma >= 11.0): True; worst 6.0501e-06 | low end (sigma <= -3.0, phi = 2.5986695638790263): True | continuity: 29051 distinct nodes, 41040 faces, all matched | ALL VERIFIED
+STAGES C PASS (2174 s); stage F: verify/eight_check_records.py on words/out/eight/check_run1
+RUN FINISHED v4F2

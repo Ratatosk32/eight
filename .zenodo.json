@@ -1,0 +1,26 @@
+{
+  "title": "The figure eight is the unique action minimiser in its symmetry class",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Stavriianov, Oleksii",
+      "orcid": "0009-0002-8504-3626",
+      "affiliation": "Independent researcher"
+    }
+  ],
+  "description": "<p>In the planar three-body problem with equal masses and Newtonian attraction, Chenciner and Montgomery proved in 2000 that the action has a collision-free minimiser among loops with the symmetry group of the figure eight. Whether this minimiser is unique has been open since; in 2002 Chenciner listed it among the global questions that seem to be out of reach. We prove that it is unique: the minimisers are exactly the figure eight and its images under the isometries of the plane that preserve the symmetry class; equivalently, the twelfth of the eight joining an Euler configuration to an isosceles one is the unique minimiser, up to the mirror, among paths between these two sets, and it is nondegenerate. The proof is a calibration argument in the shape space: a piecewise polynomial subsolution of the Hamilton-Jacobi equation bounds the action of paths that leave a tube around the eight, and a field of extremals without focal points calibrates the paths that stay in it. The finitely many inequalities this requires are verified in interval arithmetic; the verification is packaged as a certificate read as untrusted data by a separate checker. The record contains the paper, the certificate, the inputs, the checker and the code it uses, and the logs of the checker run, of the separate scripts, of an independent re-check in Arb ball arithmetic and of the mutation tests. The searches, computations and scripts were carried out with the assistance of large language models.</p>",
+  "keywords": [
+    "three-body problem",
+    "figure eight",
+    "choreography",
+    "action minimiser",
+    "uniqueness",
+    "calibration",
+    "Hamilton-Jacobi equation",
+    "computer-assisted proof",
+    "interval arithmetic"
+  ],
+  "license": "cc-by-4.0",
+  "language": "eng"
+}
