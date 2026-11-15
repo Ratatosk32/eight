@@ -21,7 +21,7 @@
 
 \title{The figure eight is the unique action minimiser\\ in its symmetry class}
 \author{Oleksii Stavriianov\thanks{Independent researcher. ORCID \href{https://orcid.org/0009-0002-8504-3626}{0009-0002-8504-3626}, \texttt{oleksii.stavriianov@gmail.com}}}
-\date{Version 1.1, November 2026}
+\date{Version 1.2, November 2026}
 
 \begin{document}
 \maketitle
@@ -885,6 +885,26 @@ proved. For the perturbation theorem of Liang, Xia and Zhou \cite{LXZ}, which as
 larger loop space, it supplies the nondegeneracy in the $D_6$-equivariant sector only; the other sectors are not
 addressed here.
 
+\begin{remark}[the orbit of \cite{KZ}]\label{rem:kz}
+Kapela and Zgliczy\'nski start the twelfth at the Euler configuration $q_1=(1,0)$, $q_2=(-1,0)$, $q_3=0$ with
+velocities $\dot q_1=\dot q_2=(v,u)$, $\dot q_3=-2(v,u)$ (masses $1$, $G=1$, as here), map $(v,u)$ to the first time at
+which $q_1\perp\dot q_1$, and prove that the resulting map $\Phi$ has a unique zero in
+$[X]=(0.347116768716,0.532724944657)\pm10^{-6}$, enclosed in $N(x_0,[X])=[0.347116886243943,0.347116889993313]\times
+[0.532724941587373,0.532724949187495]$ \cite[Lemma~3.5]{KZ}. At its Euler end, $x_8$ has the shape point $\rho e_1$ and
+momentum $(0,p_2,p_3)$; with $z_1=(q_2-q_1)/\sqrt2$, $z_2=\sqrt{2/3}\,q_3$, zero angular momentum and $p_1=0$ give
+$\dot q_1=\dot q_2=\sqrt{2/3}\,\rho^{1/2}(p_2,-p_3)$ and $|q_1|=(\rho/2)^{1/2}$, so after the scaling to $|q_1|=1$,
+$(v,u)=\sqrt{2/3}\,\rho^{1/2}(\rho/2)^{1/4}(p_2,-p_3)$. In interval arithmetic over the Krawczyk cube of
+Section~\ref{sec:eight},
+\[
+(v,|u|)\in[0.3471168878679926,\,0.3471168883698526]\times[0.532724945278479,\,0.5327249454975881]\subset N(x_0,[X])
+\]
+(the sign of $u$ is the mirror). Along $x_8$ the first time at which $q_1\perp\dot q_1$ is its isosceles end; we checked
+this in floating point only (the angle between $q_1$ and $\dot q_1$ stays away from $\pi/2$ before it). With this check,
+$x_8$ is the zero of $\Phi$ in $[X]$, so it is the orbit of \cite{KZ}, and the results proved there for that orbit
+(local uniqueness, convexity of the lobes) apply to the minimiser; so do the stability results of \cite{KS,KS17}
+insofar as they concern the same enclosed orbit.
+\end{remark}
+
 \section{Certificate, checker and controls}\label{sec:checker}
 The statements of Table~\ref{tab:obligations} involve some $10^4$ boxes found by a search. This section states what is
 trusted: not the search, but a checker that re-proves every box and builds every cover itself.
@@ -1008,9 +1028,9 @@ $(1,1,m)$ only a subgroup survives. Does the criterion of Theorem~\ref{thm:crite
 corresponding classes? (3) Homogeneous potentials $1/r^\alpha$: all inequalities used here are strict, so uniqueness can
 be expected to persist for $\alpha$ near $1$; is there a proof for all $\alpha\in[1,2]$, joining the Newtonian case to the strong
 force? (4) An independent re-implementation of the field part (stages D to F), for instance with an established
-validated integrator, as was done here for the subsolution. (5) Whether $x_8$ is the orbit enclosed in
-\cite{KZ,KS,CGHLM} is not checked here: it needs a comparison of the enclosures and would transfer the stability
-results proved there to the minimiser.
+validated integrator, as was done here for the subsolution. (5) A rigorous version of the one floating-point check
+in Remark~\ref{rem:kz} (that the isosceles end of $x_8$ is the first time at which $q_1\perp\dot q_1$), which would make
+the identification of the minimiser with the orbit of \cite{KZ} unconditional.
 
 \section*{Use of AI tools}
 The numerical searches, the interval computations and the verification scripts were carried out with the
