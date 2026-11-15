@@ -6,10 +6,10 @@ authors:
     given-names: Oleksii
     orcid: "https://orcid.org/0009-0002-8504-3626"
 type: software
-version: "1.0"
+version: "1.2"
 date-released: "2026-11-15"
 license: MIT
-doi: 10.5281/zenodo.24248043
+doi: 10.5281/zenodo.24248042
 repository-code: "https://github.com/Ratatosk32/eight"
 keywords:
   - three-body problem

@@ -2,7 +2,7 @@
 
 Oleksii Stavriianov (ORCID [0009-0002-8504-3626](https://orcid.org/0009-0002-8504-3626))
 
-Archive: [doi:10.5281/zenodo.24248043](https://doi.org/10.5281/zenodo.24248043) (release v1.0: certificate, checker, inputs, logs).
+Archive (all versions, resolves to the latest): [doi:10.5281/zenodo.24248042](https://doi.org/10.5281/zenodo.24248042). The certificate, checker, inputs and logs are unchanged since release v1.0 ([doi:10.5281/zenodo.24248043](https://doi.org/10.5281/zenodo.24248043)).
 
 The paper is `paper/eight/main.pdf` (source `paper/eight/main.tex`).
 
