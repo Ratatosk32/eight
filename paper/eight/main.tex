@@ -1,4 +1,3 @@
-% DRAFT - not for release before the certificate check passes (all stages and the mutation suite on one checker md5).
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -22,7 +21,7 @@
 
 \title{The figure eight is the unique action minimiser\\ in its symmetry class}
 \author{Oleksii Stavriianov\thanks{Independent researcher. ORCID \href{https://orcid.org/0009-0002-8504-3626}{0009-0002-8504-3626}, \texttt{oleksii.stavriianov@gmail.com}}}
-\date{Draft, November 2026}
+\date{Version 1, November 2026}
 
 \begin{document}
 \maketitle
@@ -114,7 +113,8 @@ arithmetic, the Taylor integrator and the evaluators, but not the bookkeeping (w
 where the errors of a search typically live (Section~\ref{sec:checker}). It rejects every
 mutated certificate we tried (a removed box, a lowered bound, an oversized box, a wrong hash, a removed slab box, a
 falsified record). The subsolution inequality, which carries the smallest margins, was also re-checked with an
-independent implementation in Arb ball arithmetic. The code and the certificate are available at \TODO{Zenodo DOI}.
+independent implementation in Arb ball arithmetic. The code and the certificate are available at
+\href{https://doi.org/10.5281/zenodo.24248043}{doi:10.5281/zenodo.24248043}.
 
 \paragraph{Related work.} Variational existence proofs in the $n$-body problem show that minimisers under symmetry
 constraints are free of collisions, in general by Marchal's averaging argument \cite{Marchal,FT}, or by comparing a
@@ -962,8 +962,9 @@ evaluator of $S$. The code is Python 3.11 with numpy 2.4, run on Windows x64; an
 outward after every operation (nextafter, one ulp); the Lohner integrator uses a Taylor method of order 12 with a
 Picard a priori enclosure and a Lagrange remainder.
 
-\paragraph{Reproducibility.} The certificate, the checker and the logs of the run are archived with their SHA-256
-hashes \TODO{DOI}; one command runs the six stages.
+\paragraph{Reproducibility.} The certificate, the inputs (with their md5 hashes in the certificate header), the checker
+and the logs of the run are archived at \href{https://doi.org/10.5281/zenodo.24248043}{doi:10.5281/zenodo.24248043} (repository
+\url{https://github.com/Ratatosk32/eight}); one command runs the six stages.
 
 \section{Scope, comparison and open questions}\label{sec:scope}
 \paragraph{Scope.} The theorem concerns the class $\mathcal H$ of \cite{CM}, equal masses and the Newtonian potential in

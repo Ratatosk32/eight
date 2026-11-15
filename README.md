@@ -2,7 +2,9 @@
 
 Oleksii Stavriianov (ORCID [0009-0002-8504-3626](https://orcid.org/0009-0002-8504-3626))
 
-The paper is `paper/eight/main.pdf` (source `paper/eight/main.tex`; the PDF is attached to the release).
+Archive: [doi:10.5281/zenodo.24248043](https://doi.org/10.5281/zenodo.24248043) (release v1.0: certificate, checker, inputs, logs).
+
+The paper is `paper/eight/main.pdf` (source `paper/eight/main.tex`).
 
 In the planar three-body problem with equal masses and Newtonian attraction, Chenciner and Montgomery proved in 2000
 that the action has a collision-free minimiser among loops with the symmetry group of the figure eight. The paper
