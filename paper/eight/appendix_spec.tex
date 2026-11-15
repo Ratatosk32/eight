@@ -29,7 +29,10 @@ construction.
 \subsection{Stages and postconditions}
 \paragraph{Stage A.} Recomputes the hashes of (I1)-(I3) and compares them with the header; evaluates the tube facts in
 interval arithmetic. Postcondition: the inputs are the ones named in the certificate, and (T) holds: $G(s_j)$ positive
-definite at every node, $a_8(s)\in\operatorname{int}\Lambda(s)$ for all $s\in[0,1]$, $M=0$ interior to the $M$-range of
+definite at every node (hence on every segment, the cone of positive definite matrices being convex),
+$a_8(s)\in\operatorname{int}\Lambda(s)$ for all $s\in[0,1]$ (the quadratic form of $a_8(s)$, for every $a_8$ in the
+Krawczyk box, enclosed in interval arithmetic on $s$-subintervals between the nodes, where $c$ and $G$ are linear in $s$,
+and shown to be $<1$), $M=0$ interior to the $M$-range of
 $\Lambda(0)$, the $\theta$-range of the tube in $(0,\pi)$, $\Lambda(0)$ equal to the untapered fit, and
 $\Lambda(s)\subset\Lambda_{\rm old}(s)$ for all $s$ (F6).
 
