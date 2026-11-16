@@ -200,6 +200,17 @@ $\mathcal A(\gamma)=\int_0^1L(\gamma,\dot\gamma)\,dt$ has exactly two minimisers
 its mirror image.
 \end{theorem}
 
+\begin{proof}[Proof of Theorem~\ref{thm:main} from Theorem~\ref{thm:twelfth}]
+Let $x\in\mathcal H$. By items 1 to 4, $\mathcal A(x)=12\,\mathcal A_{1/12}(x)\ge12\,(T/12)^{1/3}\mathcal A(\gamma)$, where
+$\gamma$ is the shape projection of the centred twelfth, reversed in time and scaled to duration $1$: a finite-action
+path from $E$ to $I$. By Theorem~\ref{thm:twelfth}, $\mathcal A(\gamma)\ge\mathcal A(\gamma_8)$, and
+$12\,(T/12)^{1/3}\mathcal A(\gamma_8)=\mathcal A(x_8)$. So $\mathcal A(x)\ge\mathcal A(x_8)$. If equality holds, then
+$\dot c=0$, the angular momentum vanishes a.e., and $\gamma$ is $\gamma_8$ or its mirror; the twelfth of $x$ is then a
+horizontal lift of one of these two paths, determined up to the rotation by $\pi$ by the end condition (item 3), and
+$x$ is its extension by the group (item 2). These are the four loops of Theorem~\ref{thm:main}, and each of them attains
+the minimum.
+\end{proof}
+
 \subsection{Calibration along a path}
 For $q,v\in\mathbb R^3$, Young's inequality gives
 \begin{equation}\label{eq:young}
@@ -646,7 +657,15 @@ passes both tests is called \emph{proved}: (R) and (N) hold at all its labels.
 For $\tau_1\in(0,1]$, $Y(\tau\tau_1;\varepsilon,\theta,M)=Y(\tau;\tau_1^2\varepsilon,\theta,\tau_1M)$ and
 $\tau_1P(\tau\tau_1;\varepsilon,\theta,M)=P(\tau;\tau_1^2\varepsilon,\theta,\tau_1M)$.
 \end{lemma}
-Both sides describe the same unscaled extremal at times to go $s$ and $\tau_1s$. So the labels on the curve
+\begin{proof}
+Let $(Y,P)$ solve \eqref{eq:scaled} with the parameters $(\varepsilon,\theta,M)$ and put $\tilde Y(\tau)=Y(\tau\tau_1)$,
+$\tilde P(\tau)=\tau_1P(\tau\tau_1)$. Then $\tilde Y'=\tau_1Y'(\tau\tau_1)=-4|\tilde Y|\tilde P$ and
+$\tilde P'=\tau_1^2P'(\tau\tau_1)=2|\tilde P|^2\tilde Y/|\tilde Y|-\tau_1^2\varepsilon\,\nabla U(\tilde Y)$, with
+$\tilde Y(0)=\cos\theta\,e_I+\sin\theta\,e_Z$ and $\tilde P(0)=\tau_1M\,n_I$. So $(\tilde Y,\tilde P)$ solves
+\eqref{eq:scaled} with the parameters $(\tau_1^2\varepsilon,\theta,\tau_1M)$, and the claim follows from the uniqueness of
+solutions.
+\end{proof}
+In other words, both sides describe the same unscaled extremal at times to go $s$ and $\tau_1s$. So the labels on the curve
 $\{(\tau_1^2\varepsilon,\theta,\tau_1M)\}$, along which $\theta$ and $\kappa=M/\sqrt\varepsilon$ are constant, have
 trajectories that are initial pieces of the trajectory of $(\varepsilon,\theta,M)$, and since a proved box has no
 focal point on all of $(0,1]$, (R) and (N) hold on its \emph{shadow}, the union of these curves.
