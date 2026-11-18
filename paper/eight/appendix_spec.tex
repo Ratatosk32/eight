@@ -96,7 +96,6 @@ results of library transcendental functions by three ulp. Python 3.11, numpy 2.4
 inequality is re-checked independently in Arb (Section~\ref{sec:subsolution}).
 
 \subsection{Reproduction}
-One command runs stages A to F on the certificate (about 13 hours on 10 processes of a laptop, most of it in stages D
-and F); the separate scripts for (ii$'$) and the bands run in seconds, the one for Lemma~\ref{lem:smalls} in about 9
-hours on one process (the displacement constants). Every stage prints the hashes of its code and inputs and one line
+One command runs stages A to F on the certificate; separate scripts check (ii$'$), the bands and
+Lemma~\ref{lem:smalls} (the displacement constants). Every stage prints the hashes of its code and inputs and one line
 PASS or FAIL.

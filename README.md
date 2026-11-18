@@ -56,7 +56,8 @@ from the repository root. Each stage prints the md5 of its code and inputs. The 
 (logged in `logs/end_condition_ii_prime.log`, `logs/band_*.log`, `logs/small_s_lemma.log`). Platform of the logged run: Python 3.11.4,
 numpy 2.4.6, Windows 10/11 x64.
 
-The searches, computations and scripts were carried out with the assistance of large language models.
+The work was done with Claude Code (Anthropic), running Claude Opus 5.5 and Claude Fable 5.2; the author's role and the
+division of the work are stated in the introduction of the paper ("Author's role and use of AI tools").
 
 ## Licence
 
